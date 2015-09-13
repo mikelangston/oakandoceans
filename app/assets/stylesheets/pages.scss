@@ -1,3 +1,21 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#banner{
+  .carousel-inner{
+    .item{
+      img{
+        min-height: 400px;
+        background: rgb(111,159,176);
+      }
+    }
+  }
+  .carousel-control{
+    i{
+      position: absolute;
+      top: 50%;
+      font-size: 40px;
+    }
+  }
+}
