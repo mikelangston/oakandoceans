@@ -45,6 +45,7 @@ group :development, :test do
 end
 
 # My Application gem's 
+gem 'jquery-ui-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "font-awesome-rails"
 gem 'simple_form'
