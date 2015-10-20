@@ -1,12 +1,13 @@
 class PagesController < ApplicationController
   
   def home
+    @body_class = "home"
   end
 
   def about
   end
 
-  def services
+  def terms
   end
 
 end

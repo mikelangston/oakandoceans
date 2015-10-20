@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery.easing.min
 //= require twitter/bootstrap
+//= require jasny-bootstrap
+//= require supersized.3.2.7
 //= require turbolinks
 //= require_tree .

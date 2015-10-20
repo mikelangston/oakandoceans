@@ -1,0 +1,60 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+body{
+  padding-top: 40px;
+  &:not(.home){
+    background: #fff !important;
+  }
+}
+.aqua-btn{
+  color: $third;
+  font-family: $heading-font;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 10px 20px;
+  background: #0e778a;
+  border-radius: 25px;
+  transition-duration: .4s;
+  &.lg{
+    padding: 10px 50px;
+  }
+  &:hover{
+    color: $third;
+    text-decoration: none;
+    background: #13aac5;
+    .fa-heart{
+      transform: rotate(0deg);
+    }
+  }
+  .fa-heart{
+    position: relative;
+    top: 2px;
+    margin: 0 20px 0 0;
+    transition-duration: .4s;
+    transform: rotate(-45deg);
+  }
+}
+.navbar{
+  &.navbar-inverse{
+    border-bottom: none;
+  }
+}
+.navbar-toggle{
+  display: inherit;
+  margin-left: 15px;
+}
+.banner-text{
+  text-align: center;
+  padding-top: 15%;
+  h1{
+    color: $third;
+    font-family: $heading-font;
+    font-weight: 300;
+    font-size: 72px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+}
