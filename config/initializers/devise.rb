@@ -7,7 +7,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '0a2f209be2050a2ef4dc5f4c21608049f21a6824e6511f49d323356bd4928bd292d5b744961d5d1ce22e0d855fd43967252b227d24e5eefea06e9c1a6d4ef2e9'
-  config.omniauth :facebook, "984387524956313", "73e2ab5a8d5c91b755ab625e2bc972e0"
+  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -259,4 +259,5 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  
 end
