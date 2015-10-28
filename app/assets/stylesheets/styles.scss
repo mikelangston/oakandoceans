@@ -42,7 +42,7 @@ strong{
 
 //Buttons and link styles
 .aqua-btn{
-  color: $third;
+  color: $white;
   font-family: $heading-font;
   font-weight: 400;
   font-size: 24px;
@@ -61,7 +61,7 @@ strong{
     text-align: center;
   }
   &:hover{
-    color: $third;
+    color: $white;
     text-decoration: none;
     background: #13aac5;
     .fa-heart{
@@ -93,7 +93,7 @@ strong{
   text-align: center;
   padding-top: 15%;
   h1{
-    color: $third;
+    color: $white;
     font-family: $heading-font;
     font-weight: 300;
     font-size: 72px;
