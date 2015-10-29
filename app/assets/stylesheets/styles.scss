@@ -7,7 +7,7 @@
 body{
   padding-top: 40px;
   &:not(.home){
-    background: #eeeeee !important;
+    background: #f1f1f1 !important;
   }
 }
 .main-content{
@@ -22,6 +22,7 @@ h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
 h1{
+  color: $dark-blue;
   margin-bottom: 8px;
 }
 h2{
@@ -41,6 +42,9 @@ strong{
 }
 
 //Buttons and link styles
+a{
+  color: $purple;
+}
 .aqua-btn{
   color: $white;
   font-family: $heading-font;
@@ -81,11 +85,15 @@ strong{
 .navbar{
   &.navbar-inverse{
     border-bottom: none;
+    .navbar-toggle{
+      display: inherit;
+      margin-left: 15px;
+      border: none;
+    }
   }
 }
-.navbar-toggle{
-  display: inherit;
-  margin-left: 15px;
+.navmenu-inverse{
+  border: none !important;
 }
 
 //Homepage banner styles
