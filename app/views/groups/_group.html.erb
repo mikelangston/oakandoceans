@@ -1,0 +1,14 @@
+<div class="col-md-3">
+  <div class="thumbnail">
+    <div class="caption text-center">
+      <h3><%= link_to group.name, group %></h3>
+      <p><%= group.description %></p>
+
+      <% if can? :manage, group %>
+        <%= link_to "Edit", edit_group_path(group), class: "pull-left" %>
+        <%= link_to "Delete", group, method: :delete, data: { confirm: "Are you sure?" }, class: "pull-right" %>
+        <div class="clearfix"></div>
+      <% end %>
+    </div>
+  </div>
+</div>
