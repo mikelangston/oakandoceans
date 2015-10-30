@@ -7,7 +7,7 @@
 body{
   padding-top: 40px;
   &:not(.home){
-    background: #f1f1f1 !important;
+    background: $white !important;
   }
 }
 .main-content{
@@ -32,52 +32,29 @@ h2{
 h3{
   margin-bottom: 10px;
 }
-p{
+p, a{
   font-family: $body-font;
   font-weight: 300;
   font-size: 16px;
 }
 strong{
+  font-family: $body-font;
   font-weight: 400;
 }
 
 //Buttons and link styles
 a{
-  color: $purple;
+  color: $lite-blue;
 }
-.aqua-btn{
-  color: $white;
+.btn{
   font-family: $heading-font;
   font-weight: 400;
   font-size: 24px;
-  padding: 10px 20px;
-  line-height: 1em;
-  background: $dark-blue;
-  border-radius: 25px;
-  transition-duration: .4s;
-  &.lg{
-    padding: 10px 50px;
-  }
+  border-radius: 30px;
+  padding: 10px 60px;
   &.block{
-    display: block;
     width: 100%;
-    padding: 10px 10px;
-    text-align: center;
-  }
-  &:hover{
-    color: $white;
-    text-decoration: none;
-    background: #13aac5;
-    .fa-heart{
-      transform: rotate(0deg);
-    }
-  }
-  .fa-heart{
-    position: relative;
-    top: 2px;
-    margin: 0 20px 0 0;
-    transition-duration: .4s;
-    transform: rotate(-45deg);
+    display: block;
   }
 }
 
@@ -85,11 +62,6 @@ a{
 .navbar{
   &.navbar-inverse{
     border-bottom: none;
-    .navbar-toggle{
-      display: inherit;
-      margin-left: 15px;
-      border: none;
-    }
   }
 }
 .navmenu-inverse{
@@ -114,5 +86,33 @@ a{
 .form-block{
   input{
     margin: 10px 0;
+  }
+}
+
+//Group Thumbnails
+.thumbnail{
+  &.group{
+    height: 325px;
+  }
+  .img-placeholder{
+    min-height: 220px;
+    margin-bottom: 15px;
+    background: #eeeeee;
+  }
+  h3{
+    .group-name{
+      color: $dark-blue;
+      font-weight: 400;
+      font-size: 22px;
+      &:hover{
+        color: $lite-blue;
+      }
+    }
+  }
+  .edit-link, .delete-link{
+    color: $lite-blue;
+    &:hover{
+      color: $dark-blue;
+    }
   }
 }
