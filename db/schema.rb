@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027014450) do
+ActiveRecord::Schema.define(version: 20151101220628) do
 
   create_table "groups", force: :cascade do |t|
     t.integer  "user_id",        limit: 4
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20151027014450) do
     t.string   "featured_image", limit: 255
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.integer  "location_id",    limit: 4
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.string   "postal_code", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "group_id",    limit: 4
   end
 
   create_table "memberships", force: :cascade do |t|
