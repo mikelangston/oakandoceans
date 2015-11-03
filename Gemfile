@@ -54,3 +54,4 @@ gem 'cancancan'
 gem 'rolify'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "paperclip", "~> 4.3"
