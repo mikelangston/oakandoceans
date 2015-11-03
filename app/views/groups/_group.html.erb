@@ -2,7 +2,7 @@
   <div class="thumbnail group">
     <div class="caption text-center">
       <%= link_to group do %>
-        <div class="img-placeholder"></div>
+        <%= image_tag group.featured_image.url(:medium) %>
       <% end %>
       <h3><%= link_to truncate(group.name, length: 25, separator: ' '), group, class: "group-name" %><br/><small><%= group.location.city %>, <%= group.location.state %></small></h3>
 

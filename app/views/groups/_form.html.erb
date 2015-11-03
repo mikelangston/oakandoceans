@@ -8,6 +8,8 @@
     <%= p.input :state, :collection => us_states, required: true, label: false, placeholder: "State", input_html: { class: "form-control" } %>
     <%= p.input :postal_code, required: true, label: false, placeholder: "Postal Code", input_html: { class: "form-control" } %>
   <% end %>
+  <p class="pull-left">Add an Featured Image for you Group</p>
+  <%= f.input :featured_image, as: :file, label: false, input_html: { class: "form-control" } %>
   <%= f.input :description,label: false, placeholder: "A brief description of your group", input_html: { class: "form-control" } %>
   <%= f.button :submit, class: "btn btn-info block" %>
 
