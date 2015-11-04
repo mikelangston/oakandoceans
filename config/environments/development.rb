@@ -41,4 +41,10 @@ Rails.application.configure do
 
   # Devise setup
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_host_name => 's3-us-west-2.amazonaws.com',
+    :bucket => ENV['AWS_BUCKET']
+  }
 end

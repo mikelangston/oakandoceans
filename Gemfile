@@ -55,3 +55,5 @@ gem 'rolify'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk', '~> 2'
+gem 'dotenv-rails', :groups => [:development, :test]
