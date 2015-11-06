@@ -1,0 +1,4 @@
+<h2>My Memberships</h2>
+<% @memberships.each do |membership| %>
+  <h5><%= membership.group.name %> <small><%= link_to "Leave Group", membership, method: :delete, data: { confirm: "Are you sure you wish to leave the Group?" } %></small></h5>
+<% end %>
