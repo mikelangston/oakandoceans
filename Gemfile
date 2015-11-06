@@ -54,5 +54,7 @@ gem 'cancancan'
 gem 'rolify'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem "paperclip", "~> 4.3"
-gem 'aws-sdk', '< 2.0'
+gem "fog"
+gem 'aws-sdk'
+gem 'carrierwave'
+gem "mini_magick"

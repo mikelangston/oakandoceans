@@ -72,6 +72,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:user_id, :name, :description, :featured_image, :featured_image_file_name, location_attributes: [:city, :state, :postal_code])
+      params.require(:group).permit(:user_id, :name, :description, :featured_image, location_attributes: [:city, :state, :postal_code])
     end
 end
