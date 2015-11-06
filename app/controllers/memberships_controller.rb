@@ -4,12 +4,11 @@ class MembershipsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @memberships = Membership.all
+    @user = current_user
+    @memberships = @user.memberships
   end
 
   def show
-    @user = current_user
-    @memberships = @user.memberships
   end
 
   def new

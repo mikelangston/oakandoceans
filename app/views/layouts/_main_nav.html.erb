@@ -15,6 +15,7 @@
       <% if current_user %>
         <li><%= link_to "Settings", edit_user_registration_path %></li>
         <li><a href="#">My Profile</a></li>
+        <li><%= link_to "My Groups", memberships_path %></li>
         <li><%= link_to "Small Groups", groups_path %></li>
         <li><a href="#">Singles</a></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
