@@ -11,9 +11,14 @@
   <div class="collapse navbar-collapse" id="oao-main-nav">
     <ul class="nav navbar-nav">
       <% if current_user %>
-        <li><%= link_to "Settings", edit_user_registration_path %></li>
-        <li><a href="#">My Profile</a></li>
-        <li><%= link_to "My Groups", memberships_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><%= link_to "My Groups", memberships_path %></li>
+            <li><%= link_to "Settings", edit_user_registration_path %></li>
+          </ul>
+        </li>
         <li><%= link_to "Small Groups", groups_path %></li>
         <li><a href="#">Singles</a></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
