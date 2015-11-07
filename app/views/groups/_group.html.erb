@@ -8,7 +8,7 @@
 
       <%= simple_form_for(@membership) do |f| %>
         <%= f.input :group_id, as: :hidden, input_html: { value: group.id } %>
-        <%= f.submit "Join Group" %>
+        <%= f.submit "Join Group", class: "btn btn-info sm block" %>
       <% end %>
 
       <% if can? :manage, group %>
