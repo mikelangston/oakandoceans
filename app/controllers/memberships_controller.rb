@@ -9,9 +9,6 @@ class MembershipsController < ApplicationController
     @memberships = Membership.all
   end
 
-  def show
-  end
-
   def new
     @membership = Membership.new
   end
