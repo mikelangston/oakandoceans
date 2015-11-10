@@ -5,7 +5,8 @@ class MembershipsController < ApplicationController
 
   def index
     @user = current_user
-    @memberships = @user.memberships
+    @my_memberships = @user.memberships
+    @memberships = Membership.all
   end
 
   def show

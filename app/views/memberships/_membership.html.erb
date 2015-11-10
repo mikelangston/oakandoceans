@@ -1,0 +1,14 @@
+<% @my_memberships.each do |membership| %>
+<div class="col-md-3">
+  <div class="thumbnail group">
+    <div class="caption text-center">
+      <%= link_to membership.group do %>
+        <%= image_tag(membership.group.featured_image.medium) if membership.group.featured_image? %>
+      <% end %>
+      <h3><%= link_to truncate(membership.group.name, length: 25, separator: ' '), membership.group, class: "group-name" %><br/><small><%= membership.group.location.city %>, <%= membership.group.location.state %></small></h3>
+      <%= link_to "Cancel Membership", membership, method: :delete, data: { confirm: "Are you sure you wish to cancel membership" }, class: "btn btn-info sm block" %>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<% end %>

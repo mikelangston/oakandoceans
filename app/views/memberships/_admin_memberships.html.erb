@@ -1,0 +1,17 @@
+<h2>All Memberships</h2>
+<table class="table table-striped">
+  <thead>
+    <td>#</td>
+    <td>User Email</td>
+    <td>Group</td>
+    <td>Action</td>
+  </thead>
+  <% @memberships.each_with_index do |membership, i| %>
+  <tr>
+    <td><%= i+1 %></td>
+    <td><%= membership.user.email %></td>
+    <td><%= membership.group.name %></td>
+    <td><%= link_to "Cancel Membership", membership, method: :delete, data: { confirm: "Are you sure you wish to cancel membership" } %></td>
+  </tr>
+  <% end %>
+</table>

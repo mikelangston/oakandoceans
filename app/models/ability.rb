@@ -32,7 +32,7 @@ class Ability
         can :manage, :all 
     else
         can :read, :all
-        can :manage, Group, :user_id => user.id 
+        can :manage, [Group, Membership], :user_id => user.id
     end
     
   end
