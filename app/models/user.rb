@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
 
-  has_many :memberships
-  has_many :groups
+  has_many :memberships, dependent: :destroy
+  has_many :groups, dependent: :destroy
+  has_one :profile, dependent: :destroy
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
