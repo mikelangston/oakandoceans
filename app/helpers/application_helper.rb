@@ -1,4 +1,9 @@
 module ApplicationHelper
+
+  def calendar_months
+    %w(January February March April May June July August September October November December)
+  end
+
   def us_states
     {
      :Alabama =>"Alabama",
@@ -54,4 +59,5 @@ module ApplicationHelper
      :Wyoming =>"Wyoming"
    } 
   end
+  
 end

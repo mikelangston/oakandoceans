@@ -87,6 +87,16 @@ strong{
   input{
     margin: 10px 0;
   }
+  p{
+    display: block;
+    width: 100%;
+  }
+  .profile_birthday{
+    select{
+      width: 30%;
+      display: inline-block;
+    }
+  }
 }
 
 //Group Thumbnails

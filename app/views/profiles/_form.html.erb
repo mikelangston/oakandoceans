@@ -1,18 +1,13 @@
-<%= simple_form_for(@profile) do |f| %>
+<%= simple_form_for(@profile, html: { class: "form-block" }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :profile_image %>
-    <%= f.input :screen_name %>
-    <%= f.input :age %>
-    <%= f.input :birth_day %>
-    <%= f.input :birth_month %>
-    <%= f.input :birth_year %>
-  </div>
+    <p class="pull-left">Upload a Profile picture</p>
+    <%= f.input :profile_image, as: :file, label: false, input_html: { class: "form-control" } %>
+    <%= f.input :first_name, required: true, label: false, placeholder: "First Name", input_html: { class: "form-control" } %>
+    <%= f.input :last_name, required: true, label: false, placeholder: "Last Name", input_html: { class: "form-control" } %>
+    <%= f.input :screen_name, required: true, label: false, placeholder: "Screen Name", input_html: { class: "form-control" } %>
+    <p class="pull-left">What is your Birthday?</p>
+    <%= f.input :birthday, as: :date, start_year: Date.today.year - 99, order: [:day, :month, :year], required: true, label: false, placeholder: "Birthday", input_html: { class: "form-control" } %>
+    <%= f.button :submit, class: "btn btn-info block" %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
 <% end %>
