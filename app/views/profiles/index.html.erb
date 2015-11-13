@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1>All Profiles</h1>
 
-<h1>Listing Profiles</h1>
-
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>First name</th>
@@ -22,12 +20,9 @@
       <tr>
         <td><%= profile.first_name %></td>
         <td><%= profile.last_name %></td>
-        <td><%= profile.profile_image %></td>
+        <td><%= profile.profile_image.thumb %></td>
         <td><%= profile.screen_name %></td>
-        <td><%= profile.age %></td>
-        <td><%= profile.birth_day %></td>
-        <td><%= profile.birth_month %></td>
-        <td><%= profile.birth_year %></td>
+        <td><%= profile.birthday %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>

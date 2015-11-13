@@ -12,7 +12,7 @@
 
 <p>
   <strong>Profile image:</strong>
-  <%= @profile.profile_image %>
+  <%= image_tag(@profile.profile_image.thumb) %>
 </p>
 
 <p>
@@ -21,23 +21,8 @@
 </p>
 
 <p>
-  <strong>Age:</strong>
-  <%= @profile.age %>
-</p>
-
-<p>
-  <strong>Birth day:</strong>
-  <%= @profile.birth_day %>
-</p>
-
-<p>
-  <strong>Birth month:</strong>
-  <%= @profile.birth_month %>
-</p>
-
-<p>
-  <strong>Birth year:</strong>
-  <%= @profile.birth_year %>
+  <strong>Birthday:</strong>
+  <%= @profile.birthday %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
