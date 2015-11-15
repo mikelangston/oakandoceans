@@ -102,25 +102,35 @@ strong{
 //Group Thumbnails
 .thumbnail{
   &.group{
-    height: 340px;
-  }
-  .img-placeholder{
-    min-height: 220px;
-    margin-bottom: 15px;
-    background: #eeeeee;
+    position: relative;
+    min-height: 310px;
   }
   h3{
     .group-name{
       color: $dark-blue;
       font-weight: 400;
-      font-size: 22px;
+      font-size: 20px;
       &:hover{
         color: $lite-blue;
       }
     }
   }
-  .edit-link, .delete-link{
-    color: $lite-blue;
+  .edit-link{
+    font-size: 25px;
+    color: #31b0d5;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    &:hover{
+      color: $dark-blue;
+    }
+  }
+  .delete-link{
+    font-size: 25px;
+    color: #c9302c;
+    position: absolute;
+    top: 0;
+    right: 5px;
     &:hover{
       color: $dark-blue;
     }
