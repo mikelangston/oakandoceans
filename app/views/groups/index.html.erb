@@ -1,14 +1,13 @@
-<div class="col-md-8">
-  <h1>Find a Group to Join and Start Making New Friends!</h1>
-</div>
-<div class="col-md-4">
-  <%= link_to 'Create a New Group', new_group_path, class: "btn btn-info pull-right" %>
-</div>
-<div class="col-md-12">
+<div class="col-md-9">
+  <h1>Find a Group, Join, &amp; Start Making New Friends!</h1>
   <p>Can't find a group right for you? Create your own group for others to join.</p>
 </div>
+<div class="col-md-3">
+  <%= link_to 'Create a New Group', new_group_path, class: "btn btn-info block sm" %>
+</div>
+<div class="clearfix"></div>
 <br/>
 
 <div class="row">
-<%= render @groups %>
+  <%= render @groups %>
 </div>
