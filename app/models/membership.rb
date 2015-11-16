@@ -3,4 +3,8 @@ class Membership < ActiveRecord::Base
   belongs_to :group
 
   validates :user_id, :group_id, presence: true
+
+  def joined
+    self.created_at.strftime("%B %d, %Y")
+  end
 end

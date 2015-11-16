@@ -99,7 +99,7 @@ strong{
   }
 }
 
-//Group Thumbnails
+//Groups
 .thumbnail{
   &.group{
     position: relative;
@@ -135,4 +135,9 @@ strong{
       color: $dark-blue;
     }
   }
+}
+
+//Profiles
+.profile-img{
+  margin-bottom: 15px;
 }

@@ -1,27 +1,24 @@
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
-
-<p>
-  <strong>Profile image:</strong>
-  <%= image_tag(@profile.profile_image.thumb) %>
-</p>
-
-<p>
-  <strong>Screen name:</strong>
-  <%= @profile.screen_name %>
-</p>
-
-<p>
-  <strong>Birthday:</strong>
-  <%= @profile.birthday %>
-</p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<div class="col-md-4">
+  <%= image_tag(@profile.profile_image.large, class: "img-responsive profile-img") if @profile.profile_image? %>
+  <h3><%= @profile.first_name %>'s Memberships</h3>
+  <table class="table table-striped">
+    <thead>
+      <th>Memberships</th>
+      <th>Joined</th>
+    </thead>
+    <tbody>
+    <% @profile.user.memberships.each do |membership| %>
+      <tr>
+        <td><%= membership.group.name %></td>
+        <td><%= membership.joined %></td>
+      </tr>
+    <% end %>
+    <tbody>
+  </table>
+</div><!--end col-md-4-->
+<div class="col-md-8">
+  <h1><%= @profile.full_name %> <small>@<%= @profile.screen_name %></small></h1>
+  <% if can? :manage, @profile %>
+    <p><%= link_to 'Edit Profile', edit_profile_path(@profile) %></p>
+  <% end %>
+</div><!--end col-md-8-->
