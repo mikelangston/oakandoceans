@@ -8,4 +8,7 @@ class Group < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true
 
+  def since
+    self.created_at.strftime("%B %d, %Y")
+  end
 end

@@ -100,6 +100,10 @@ strong{
 }
 
 //Groups
+.group-img{
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
 .thumbnail{
   &.group{
     position: relative;
@@ -140,4 +144,5 @@ strong{
 //Profiles
 .profile-img{
   margin-bottom: 15px;
+  border-radius: 7px;
 }

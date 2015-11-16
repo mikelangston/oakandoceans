@@ -17,8 +17,8 @@
   </table>
 </div><!--end col-md-4-->
 <div class="col-md-8">
-  <h1><%= @profile.full_name %> <small>@<%= @profile.screen_name %></small></h1>
   <% if can? :manage, @profile %>
     <p><%= link_to 'Edit Profile', edit_profile_path(@profile) %></p>
   <% end %>
+  <h1><%= @profile.full_name %> <small>@<%= @profile.screen_name %></small></h1>
 </div><!--end col-md-8-->
