@@ -1,0 +1,10 @@
+<div class="col-md-3">
+  <div class="thumbnail profile">
+    <div class="caption text-center">
+      <%= link_to profile do %>
+        <%= image_tag(profile.profile_image.large) if profile.profile_image? %>
+      <% end %>
+      <h3><%= link_to profile.screen_name, profile %></h3>
+    </div>
+  </div>
+</div>
