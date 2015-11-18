@@ -15,6 +15,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @event.build_venue
   end
 
   # GET /events/1/edit
@@ -69,6 +70,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:group_id, :name, :venue_id, :date)
+      params.require(:event).permit(:group_id, :name, :venue_id, :date, venue_attributes: [:name, :state, :city])
     end
 end
