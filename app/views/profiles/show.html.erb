@@ -7,9 +7,9 @@
       <th>Joined</th>
     </thead>
     <tbody>
-    <% @profile.user.memberships.each do |membership| %>
+    <% @memberships.each do |membership| %>
       <tr>
-        <td><%= membership.group.name %></td>
+        <td><%= link_to membership.group.name, group_path(membership.group.id) %></td>
         <td><%= membership.joined %></td>
       </tr>
     <% end %>
