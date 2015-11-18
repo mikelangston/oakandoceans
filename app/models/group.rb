@@ -3,6 +3,7 @@ class Group < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :users, through: :memberships
   has_one :location, dependent: :destroy
+  has_many :events, dependent: :destroy
   accepts_nested_attributes_for :location
   mount_uploader :featured_image, FeaturedImageUploader
 
