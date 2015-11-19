@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118202208) do
+ActiveRecord::Schema.define(version: 20151119133850) do
 
   create_table "events", force: :cascade do |t|
     t.integer  "group_id",   limit: 4
@@ -101,7 +101,6 @@ ActiveRecord::Schema.define(version: 20151118202208) do
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
   create_table "venues", force: :cascade do |t|
-    t.integer  "group_id",       limit: 4
     t.string   "name",           limit: 255
     t.string   "state",          limit: 255
     t.string   "city",           limit: 255
