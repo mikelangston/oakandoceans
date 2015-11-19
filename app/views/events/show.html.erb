@@ -2,7 +2,7 @@
 
 <p>
   <strong>Group:</strong>
-  <%= @event.group_id %>
+  <%= @group.name %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @event.date %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_group_event_path(@group, @event) %> |
+<%= link_to 'Back', group_events_path %>

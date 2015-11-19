@@ -3,6 +3,6 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Show', @event %> |
-  <%= link_to 'Back', events_path %>
+  <%= link_to 'Show', group_events_path(@group, @event) %> |
+  <%= link_to 'Back', group_events_path %>
 </div>

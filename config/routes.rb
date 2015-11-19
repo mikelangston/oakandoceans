@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :events
-  resources :venues
   resources :profiles
-  resources :groups
+  resources :groups do
+    resources :events
+  end
   resources :memberships
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks", :registrations => "registrations" }
   # The priority is based upon order of creation: first created -> highest priority.
