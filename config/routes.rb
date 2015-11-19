@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :venues
   resources :events
+  resources :venues
   resources :profiles
   resources :groups
   resources :memberships
