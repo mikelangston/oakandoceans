@@ -5,10 +5,12 @@
         <%= image_tag(group.featured_image.large) if group.featured_image? %>
       <% end %>
       <h3><%= link_to truncate(group.name, length: 25, separator: ' '), group, class: "group-name" %><br/><small><%= group.location.city %>, <%= group.location.state %></small></h3>
-      <%= simple_form_for(@membership) do |f| %>
-        <%= f.input :group_id, as: :hidden, input_html: { value: group.id } %>
-        <%= f.submit "Join Group", class: "btn btn-info sm block join-btn" %>
-      <% end %>
+      <div class="form-container">
+        <%= simple_form_for(@membership) do |f| %>
+          <%= f.input :group_id, as: :hidden, input_html: { value: group.id } %>
+          <%= f.submit "Join Group", class: "btn btn-info sm block join-btn" %>
+        <% end %>
+      </div>
       <% if can? :manage, group %>
         <%= link_to "<i class='fa fa-pencil-square'></i>".html_safe, edit_group_path(group), data: { confirm: "Are you sure you want to Edit this Group?" }, class: "edit-link pull-left" %>
         <%= link_to "<i class='fa fa-times-circle'></i>".html_safe, group, method: :delete, data: { confirm: "Are you sure you want to Delete this Group?" }, class: "delete-link pull-right" %>

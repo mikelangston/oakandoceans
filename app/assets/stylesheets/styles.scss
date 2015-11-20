@@ -107,7 +107,18 @@ strong{
 .thumbnail{
   &.group{
     position: relative;
-    min-height: 310px;
+    min-height: 350px;
+    .caption{
+      img{
+        margin-bottom: 10px;
+      }
+    }
+    .form-container{
+      position: absolute;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
+    }
   }
   h3{
     .group-name{
