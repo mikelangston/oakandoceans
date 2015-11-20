@@ -17,7 +17,7 @@
   <% if can? :manage, @group %>
     <%= link_to 'Edit Group', edit_group_path(@group) %>
   <% end %>
-  <h1><%= @group.name %> <small><%= @group.location.city %>, <%= @group.location.state %></small></h1>
+  <h1><%= @group.name %><br/><small><%= @group.location.city_state %></small></h1>
   <h3>Group Est. <small><%= @group.since %></small></h3>
   <p><%= @group.description %></p>
 </div><!--end col-md-8-->
