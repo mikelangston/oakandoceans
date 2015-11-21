@@ -44,7 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
-# My Application gem's 
+# My Application gem's
 gem 'jquery-ui-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "font-awesome-rails"
@@ -58,3 +58,4 @@ gem "fog"
 gem 'aws-sdk'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'annotate'
