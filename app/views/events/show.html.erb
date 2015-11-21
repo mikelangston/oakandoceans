@@ -20,5 +20,5 @@
   <%= @event.date %>
 </p>
 
-<%= link_to 'Edit', edit_group_event_path(@group, @event) %> |
-<%= link_to 'Back', group_events_path %>
+<%= link_to 'Back to Group', group_path(@group) %> | 
+<%= link_to 'Edit', edit_group_event_path(@group, @event) %>
