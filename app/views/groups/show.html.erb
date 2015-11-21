@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <%= image_tag(@group.featured_image.large, class: "img-responsive group-img") if @group.featured_image? %>
-  <h3>Up Coming Events</h3>
+  <h3>Up Coming Events <%= link_to 'Add an Event', new_group_event_path(@group.id) if can? :manage, @group %></h3>
   <h3>Group Members</h3>
   <hr/>
   <% @memberships.each do |member| %>
