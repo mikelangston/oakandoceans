@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.json
   def show
-    @events = @group.events
+    @events = @group.events.where('date >= ?', Date.today).order(:date)
     @memberships = @group.memberships
   end
 
