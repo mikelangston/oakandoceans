@@ -1,27 +1,8 @@
-<p>
-  <strong>Group:</strong>
-  <%= @group.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
-
-<%= link_to 'Back to Group', group_path(@group) %> |
-<%= link_to 'Edit', edit_group_event_path(@group, @event) %>
+<div class="col-md-8 col-md-offset-2">
+  <h3><%= @group.name %> Presents</h3>
+  <h1><%= @event.name %></h1>
+  <h2><%= @event.venue.name %> - <small><%= @event.date.strftime("%B %d, %Y") %></small></h2>
+  <p><%= @event.description %></p>
+  <%= link_to 'Back to Group', group_path(@group) %> |
+  <%= link_to 'Edit', edit_group_event_path(@group, @event) %>
+</div>
