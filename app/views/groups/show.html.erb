@@ -1,20 +1,5 @@
 <div class="col-md-4">
   <%= image_tag(@group.featured_image.large, class: "img-responsive group-img") if @group.featured_image? %>
-  <h3>Up Coming Events <%= link_to 'Add an Event', new_group_event_path(@group.id) if can? :manage, @group %></h3>
-  <table class="table table-striped">
-    <thead>
-      <th>Event</th>
-      <th>Date</th>
-    </thead>
-    <tbody>
-      <% @events.each do |event| %>
-      <tr>
-        <td><%= link_to event.name, group_event_path(@group, event) %></td>
-        <td><%= event.date.strftime("%b %d, %Y") %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
   <h3>Group Members</h3>
   <hr/>
   <% @memberships.each do |member| %>
@@ -34,4 +19,21 @@
   <h1><%= @group.name %><br/><small><%= @group.location.city_state %></small></h1>
   <h3>Group Est. <small><%= @group.since %></small></h3>
   <p><%= @group.description %></p>
+  <h3>Up Coming Events <%= link_to 'Add an Event', new_group_event_path(@group.id) if can? :manage, @group %></h3>
+  <table class="table table-striped">
+    <thead>
+      <th>Event</th>
+      <th>Venue</th>
+      <th>Date</th>
+    </thead>
+    <tbody>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event.name, group_event_path(@group, event) %></td>
+        <td><%= event.venue.name %></td>
+        <td><%= event.date.strftime("%b %d, %Y") %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div><!--end col-md-8-->
