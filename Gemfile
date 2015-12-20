@@ -59,3 +59,4 @@ gem 'aws-sdk'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'annotate'
+gem "administrate", "~> 0.1.2"
